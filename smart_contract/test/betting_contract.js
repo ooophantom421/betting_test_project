@@ -7,14 +7,6 @@ const fs = require('fs');
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
 contract('BettingContract', async accounts => {
-  it("send ETH to Contract", async () => {
-    // token contract deploy
-    let deployed_betting_contract = await BettingContract.deployed();
-
-    // send ETH to Contract from fifth account
-    address(deployed_betting_contract.address).transfer (10 * 10 ** 18, {from: accounts[5]});
-  });
-
   it("multiple betting", async () => {
     // token contract deploy
     let deployed_betting_contract = await BettingContract.deployed();
