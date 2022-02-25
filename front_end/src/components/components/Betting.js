@@ -40,7 +40,7 @@ const Betting = () => {
 
   const handleBetting = async () => {
     setSelectCoin(0);
-    if (!amount) {
+    if (!amount || amount <= 0) {
       toast.error('Please insert a betting amount!');
       return;
     }
